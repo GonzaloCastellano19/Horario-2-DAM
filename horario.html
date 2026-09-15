@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Horario de clase</title>
+<style>
+  :root{
+    --verde-oscuro: #2f4a3c;
+    --verde: #4c7a5f;
+    --verde-claro: #a9c2ae;
+    --crema: #f7f5ef;
+    --gris-texto: #3a3a35;
+    --linea: #d9d4c6;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--crema);
+    color: var(--gris-texto);
+    font-family: 'Georgia', 'Iowan Old Style', serif;
+    padding: 48px 24px 80px;
+  }
+
+  .page {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  header {
+    border-bottom: 2px solid var(--verde-oscuro);
+    padding-bottom: 22px;
+    margin-bottom: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .titulo h1 {
+    font-size: 2.4rem;
+    margin: 0 0 6px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    color: var(--verde-oscuro);
+  }
+
+  .titulo p {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.85rem;
+    color: #6b6b60;
+    letter-spacing: 0.4px;
+  }
+
+  .instituto {
+    text-align: right;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.78rem;
+    color: var(--verde);
+    line-height: 1.5;
+  }
+
+  .instituto strong {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--verde-oscuro);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(47,74,60,0.08);
+  }
+
+  thead th {
+    background: var(--verde-oscuro);
+    color: #f2f0e6;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 0.82rem;
+    letter-spacing: 0.4px;
+    padding: 14px 12px;
+    text-align: left;
+  }
+
+  thead th:first-child {
+    width: 110px;
+    background: var(--verde);
+  }
+
+  tbody td {
+    padding: 14px 12px;
+    border-bottom: 1px solid var(--linea);
+    font-size: 0.95rem;
+    vertical-align: top;
+    line-height: 1.35;
+  }
+
+  tbody td:first-child {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.8rem;
+    color: var(--verde-oscuro);
+    font-weight: 600;
+    white-space: nowrap;
+    background: #f0ede3;
+    border-right: 1px solid var(--linea);
+  }
+
+  tbody tr:nth-child(even) td:not(:first-child) {
+    background: #fbfaf6;
+  }
+
+  tr.recreo td {
+    background: var(--verde-claro) !important;
+    color: var(--verde-oscuro);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 8px 12px;
+    border-right: none;
+  }
+
+  .profesor-col {
+    color: #9a9688;
+    font-style: italic;
+    font-size: 0.85rem;
+  }
+
+  .nota {
+    margin-top: 28px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 0.8rem;
+    color: #6b6b60;
+    line-height: 1.6;
+    border-left: 2px solid var(--verde-claro);
+    padding-left: 14px;
+  }
+
+  .nota strong { color: var(--verde-oscuro); }
+
+  @media (max-width: 720px) {
+    thead th, tbody td { font-size: 0.78rem; padding: 10px 8px; }
+    .titulo h1 { font-size: 1.7rem; }
+    .instituto { text-align: left; }
+    header { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="titulo">
+        <h1>Horario de clase</h1>
+        <p>DAM · CURSO 2025–2026</p>
+      </div>
+      <div class="instituto">
+        <strong>Victoria Institute of Technology</strong>
+        Camino de la Jara s/n, 11540<br>
+        Sanlúcar de Barrameda
+      </div>
+    </header>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Hora</th>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miércoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+          <th>Profesor/a</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>08:00–09:00</td>
+          <td>Inglés profesional</td>
+          <td>Itinerario personal para la empleabilidad II</td>
+          <td>Desarrollo de interfaces</td>
+          <td>Sistemas de gestión empresarial</td>
+          <td>Sistemas de gestión empresarial</td>
+          <td class="profesor-col">—</td>
+        </tr>
+        <tr>
+          <td>09:00–10:00</td>
+          <td>Desarrollo de interfaces</td>
+          <td>Programación multimedia y dispositivos móviles</td>
+          <td>Acceso a datos</td>
+          <td>Programación de servicios y procesos</td>
+          <td>Programación multimedia y dispositivos móviles</td>
+          <td class="profesor-col">—</td>
+        </tr>
+        <tr>
+          <td>10:00–11:00</td>
+          <td>Sistemas de gestión empresarial</td>
+          <td>Acceso a datos</td>
+          <td>Inglés profesional</td>
+          <td>Acceso a datos</td>
+          <td>Desarrollo de interfaces</td>
+          <td class="profesor-col">—</td>
+        </tr>
+        <tr class="recreo">
+          <td colspan="7">RECREO — 11:00 · 11:30</td>
+        </tr>
+        <tr>
+          <td>11:30–12:30</td>
+          <td>Acceso a datos</td>
+          <td>Optativa</td>
+          <td>Sistemas de gestión empresarial</td>
+          <td>Inglés profesional</td>
+          <td>Optativa</td>
+          <td class="profesor-col">—</td>
+        </tr>
+        <tr>
+          <td>12:30–13:30</td>
+          <td>Programación de servicios y procesos</td>
+          <td>Proyecto intermodular de desarrollo de aplicaciones multiplataforma</td>
+          <td>Programación multimedia y dispositivos móviles</td>
+          <td>Desarrollo de interfaces</td>
+          <td>Itinerario personal para la empleabilidad II</td>
+          <td class="profesor-col">—</td>
+        </tr>
+        <tr>
+          <td>13:30–14:30</td>
+          <td>Programación de servicios y procesos</td>
+          <td>Desarrollo de interfaces</td>
+          <td>Itinerario personal para la empleabilidad II</td>
+          <td>Desarrollo de interfaces</td>
+          <td>Proyecto intermodular de desarrollo de aplicaciones multiplataforma</td>
+          <td class="profesor-col">—</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="nota">
+      <strong>Nota:</strong> los bloques de miércoles a las 08:00 y a las 10:00 aparecían en la foto original como "DE" e "IPP", sin corresponder a ninguna asignatura de tu lista; se han interpretado como Desarrollo de interfaces e Inglés profesional. La columna de profesor/a queda vacía porque ese dato no aparecía en las imágenes.
+    </p>
+  </div>
+</body>
+</html>
